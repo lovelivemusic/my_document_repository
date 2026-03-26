@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568"/>
+    </marker>
+  </defs>
+  <rect x="10" y="60" width="160" height="80" rx="10" fill="#ebf5ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="90" y="95" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Markdown</text>
+  <text x="90" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3b82f6">(.md files)</text>
+  <line x1="170" y1="100" x2="240" y2="100" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="250" y="60" width="160" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="330" y="95" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#92400e">GITMD2PDF</text>
+  <text x="330" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b45309">(converter)</text>
+  <line x1="410" y1="100" x2="480" y2="100" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="490" y="60" width="160" height="80" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="570" y="95" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#166534">PDF Output</text>
+  <text x="570" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#16a34a">(.pdf file)</text>
+</svg>

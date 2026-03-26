@@ -219,9 +219,23 @@ Use `git clone` to copy a repo. The config lives in `~/.gitmd2pdf/config.json`. 
 
 ## Images
 
-![Sample diagram showing a conversion pipeline](https://via.placeholder.com/800x300?text=Markdown+to+PDF+Pipeline)
+### Local Image (Relative Path)
 
-*Figure 1: Conversion pipeline overview*
+![GITMD2PDF conversion pipeline](../images/diagram-pipeline.svg)
+
+*Figure 1: Conversion pipeline — SVG loaded from a relative path*
+
+### Local PNG Image
+
+![Sample banner image](../images/sample-blue.png)
+
+*Figure 2: A solid-colour PNG banner from the images directory*
+
+### Image with Title
+
+![Logo placeholder](../images/logo-placeholder.png "Placeholder for a company logo")
+
+For a comprehensive set of image tests, see [Image Examples](Image%20Examples.md).
 
 ---
 

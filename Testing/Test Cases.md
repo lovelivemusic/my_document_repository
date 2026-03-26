@@ -198,11 +198,27 @@ Line 3 of the code block.
 
 **Objective:** Verify image rendering in PDF output.
 
-![Placeholder image — alt text should appear if image is missing](https://via.placeholder.com/600x200?text=GITMD2PDF+Test+Image)
+### Local PNG Image
 
-*Figure 1: A placeholder test image with caption text below*
+![Blue sample banner](../images/sample-blue.png)
 
-### Status: Conditional (depends on network access during conversion)
+*Figure 1: A PNG image loaded via relative path*
+
+### Local SVG Image
+
+![Pipeline diagram](../images/diagram-pipeline.svg)
+
+*Figure 2: An SVG diagram loaded via relative path*
+
+### Image with Alt Text Fallback
+
+![This image does not exist — this alt text should appear instead](../images/nonexistent.png)
+
+*Figure 3: Missing image — alt text should render in place of the image*
+
+For a complete set of image tests, see [Image Examples](../Examples/Image%20Examples.md).
+
+### Status: Pass
 
 ---
 
