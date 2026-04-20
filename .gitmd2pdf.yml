@@ -1,22 +1,57 @@
-# Basic example for testing the "Config applied" badge.
+# Custom-structure example for testing both badges.
 #
 # Drop this file in the root of `my_document_repository` (rename to
 # `.gitmd2pdf.yml`) and run a Premium repo conversion on stage. Expected:
-#   - green "Config applied ✓" badge  (config_applied: true)
-#   - NO "Custom structure" badge     (no `structure:` key)
+#   - green "Config applied ✓"       (config_applied: true)
+#   - blue  "Custom structure ✓"     (structure_applied: true)
 #
-# Everything here is optional beyond `schema_version`; this config only
-# exercises metadata + ignore.
+# File paths below are tailored to the `lovelivemusic/my_document_repository`
+# tree. Adjust if the repo layout changes.
 
 schema_version: 1
 
-title: "My Document Repository — Basic Config Example"
+title: "My Document Repository — Custom Structure"
 author: "Mods Software"
 version: "1.0.0"
 date: auto
 
-# Glob patterns matched against repo-root-relative paths.
 ignore:
   - ".github/**"
   - "**/DRAFT-*.md"
-  - "Testing/**"
+
+# Explicit output hierarchy. Unlisted .md files are auto-appended at the
+# end, indented by folder depth.
+structure:
+
+  # Grouping node — title only, no file of its own
+  - title: "Introduction"
+    children:
+      - file: README.md
+        title: "About This Repository"
+
+  # Simple single-file node with a title override
+  - title: "Planning"
+    file: Planning/My Plan.md
+
+  # Glob include — pulls every .md file under Projects/ in filename order
+  - title: "Active Projects"
+    include: "Projects/*.md"
+    sort: filename
+
+  # Grouping with per-file title overrides and a heading-shift opt-out
+  - title: "Reference Examples"
+    children:
+      - file: Examples/Formatting Showcase.md
+      - file: Examples/Image Examples.md
+        title: "Embedding Images"
+      - file: Examples/Edge Cases.md
+        shift_headings: false
+
+  # File-node that also has children nested underneath
+  - title: "Quality Assurance"
+    file: Testing/Test plan.md
+    children:
+      - file: Testing/Test Cases.md
+
+# `Reports/Monthly Status.md` is intentionally NOT listed — it should
+# auto-append at the end of the PDF at folder-depth 1.

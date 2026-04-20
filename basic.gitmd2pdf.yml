@@ -1,0 +1,22 @@
+# Basic example for testing the "Config applied" badge.
+#
+# Drop this file in the root of `my_document_repository` (rename to
+# `.gitmd2pdf.yml`) and run a Premium repo conversion on stage. Expected:
+#   - green "Config applied ✓" badge  (config_applied: true)
+#   - NO "Custom structure" badge     (no `structure:` key)
+#
+# Everything here is optional beyond `schema_version`; this config only
+# exercises metadata + ignore.
+
+schema_version: 1
+
+title: "My Document Repository — Basic Config Example"
+author: "Mods Software"
+version: "1.0.0"
+date: auto
+
+# Glob patterns matched against repo-root-relative paths.
+ignore:
+  - ".github/**"
+  - "**/DRAFT-*.md"
+  - "Testing/**"
