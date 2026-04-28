@@ -1,0 +1,36 @@
+schema_version: 1
+
+title: "My Document Repository — Custom Structure"
+author: "Mods Software"
+version: "1.0.0"
+date: auto
+
+ignore:
+  - "Best Practices in Nodejs.md"
+
+structure:
+
+  - title: "Introduction"
+    children:
+      - file: README.md
+        title: "About This Repository"
+
+  - title: "Planning"
+    file: Planning/My Plan.md
+
+  - title: "Active Projects"
+    include: "Projects/*.md"
+    sort: filename
+
+  - title: "Reference Examples"
+    children:
+      - file: Examples/Formatting Showcase.md
+      - file: Examples/Image Examples.md
+        title: "Embedding Images"
+      - file: Examples/Edge Cases.md
+        shift_headings: false
+
+  - title: "Quality Assurance"
+    file: Testing/Test plan.md
+    children:
+      - file: Testing/Test Cases.md
