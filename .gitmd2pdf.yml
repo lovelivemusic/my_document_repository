@@ -1,13 +1,3 @@
-# Custom-structure example for testing both badges.
-#
-# Drop this file in the root of `my_document_repository` (rename to
-# `.gitmd2pdf.yml`) and run a Premium repo conversion on stage. Expected:
-#   - green "Config applied ✓"       (config_applied: true)
-#   - blue  "Custom structure ✓"     (structure_applied: true)
-#
-# File paths below are tailored to the `lovelivemusic/my_document_repository`
-# tree. Adjust if the repo layout changes.
-
 schema_version: 1
 
 title: "My Document Repository — Custom Structure"
@@ -16,29 +6,22 @@ version: "1.0.0"
 date: auto
 
 ignore:
-  - ".github/**"
-  - "**/DRAFT-*.md"
+  - "Best Practices in Nodejs.md"
 
-# Explicit output hierarchy. Unlisted .md files are auto-appended at the
-# end, indented by folder depth.
 structure:
 
-  # Grouping node — title only, no file of its own
   - title: "Introduction"
     children:
       - file: README.md
         title: "About This Repository"
 
-  # Simple single-file node with a title override
   - title: "Planning"
     file: Planning/My Plan.md
 
-  # Glob include — pulls every .md file under Projects/ in filename order
   - title: "Active Projects"
     include: "Projects/*.md"
     sort: filename
 
-  # Grouping with per-file title overrides and a heading-shift opt-out
   - title: "Reference Examples"
     children:
       - file: Examples/Formatting Showcase.md
@@ -47,11 +30,7 @@ structure:
       - file: Examples/Edge Cases.md
         shift_headings: false
 
-  # File-node that also has children nested underneath
   - title: "Quality Assurance"
     file: Testing/Test plan.md
     children:
       - file: Testing/Test Cases.md
-
-# `Reports/Monthly Status.md` is intentionally NOT listed — it should
-# auto-append at the end of the PDF at folder-depth 1.
